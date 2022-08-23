@@ -6,7 +6,13 @@ import { Form, Input, Button, Label } from './ContactForm.styled';
 class ContactForm extends Component {
   static propTypes = {
     addContact: PropTypes.func.isRequired,
-    contacts: PropTypes.array.isRequired,
+    contacts: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
+      })
+    ).isRequired,
   };
 
   state = {

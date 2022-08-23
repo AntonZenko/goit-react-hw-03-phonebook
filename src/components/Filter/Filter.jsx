@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import { Label, Input } from './Filter.styled';
-// import s from './Filter.module.css';
 
 function Filter({ filter, handleChange }) {
   const inputId = nanoid();

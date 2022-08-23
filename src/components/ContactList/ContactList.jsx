@@ -24,6 +24,12 @@ function ContactList({ visibleContacts, deleteContact }) {
 export default ContactList;
 
 ContactList.propTypes = {
-  visibleContacts: PropTypes.array.isRequired,
+  visibleContacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ).isRequired,
   deleteContact: PropTypes.func.isRequired,
 };
